@@ -34,16 +34,6 @@ import 'uikit/dist/css/uikit.min.css';
 
 import './styles/style.sass';
 
-/*
-const Page = (props) => (
-  <div>
-    <Header activeLanguage={props.aLang} activeLink={props.aLink} logo={props.logo} links={props.links} languages={props.languages} linksSmall={props.linksSmall} />
-    {props.children}
-    <Footer links={props.links} contacts={props.contacts} />
-  </div>
-);
-*/
-
 const Index = (props) => (
   <div>
     <Header activeLanguage={props.aLang} activeLink={props.aLink} logo={props.logo} links={props.links} languages={props.languages} linksSmall={props.linksSmall} />
@@ -59,25 +49,6 @@ const AboutAuthor = (props) => (
     <Footer links={props.links} contacts={props.contacts} />
   </div>
 );
-
-/*
-const NotFound = () => (
-  <div>
-    <Header logo={LogoLinksData} links={MenuLinksData} languages={MenuLanguageLinksData} linksS={HeaderMenuSmallLinksData} />
-    <p>404 not found</p>
-    <Footer links={MenuLinksData} contacts={FooterContactsData} />
-  </div>
-);*/
-
-/*
-const NotFound = () => (
-  <div>
-    <p>404 not found</p>
-  </div>
-);
-*/
-
-/*alert(JSON.stringify(DataLogoLinks));*/
 
 ReactDOM.render(
   <Router>
