@@ -5,11 +5,9 @@ import PortraitImage from '../images/about-author/portrait.jpg';
 function PhotoAboutAuthor() {
   return (
     <section className="uk-width-1-1 uk-width-1-3@s">
-      <div className="aos-item" data-aos="zoom-in-up">
-        <div className="portrait-image-block">
-          <div className="aos-item__inner portrait-image-shadow">
-            <img src={PortraitImage} alt="portrait" className="portrait-image block-shadow" />
-          </div>
+      <div className="portrait-image-block">
+        <div className="portrait-image-shadow">
+          <img src={PortraitImage} alt="portrait" className="portrait-image block-shadow" />
         </div>
       </div>
     </section>
@@ -54,11 +52,9 @@ function HorizontalAboutAuthorBlock(props) {
 
   return (
     <section className={`uk-width-${props.ukWidth}`}>
-      <div className="aos-item" data-aos={`zoom-in-${props.upDown}`}>
-        <div className="aos-item__inner double-text-block">
-          <h1 className="title-text text-item-colors-underline">{props.title}</h1>
-          <div className="uk-grid">{blocks}</div>
-        </div>
+      <div className="double-text-block">
+        <h1 className="title-text text-item-colors-underline">{props.title}</h1>
+        <div className="uk-grid">{blocks}</div>
       </div>
     </section>
   );

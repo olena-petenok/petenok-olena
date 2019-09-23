@@ -17,12 +17,10 @@ function VerticalIndexBlock(props) {
 
   return (
     <div className={`uk-width-${props.ukWidth}`}>
-      <div className="aos-item" data-aos="zoom-in-up">
-        <div className="aos-item__inner services-block block-shadow">
-          <img src={props.src} alt={props.alt} className="element-round-image" />
-          <p className="element-title">{props.title}</p>
-          {text}
-        </div>
+      <div className="services-block block-shadow">
+        <img src={props.src} alt={props.alt} className="element-round-image" />
+        <p className="element-title">{props.title}</p>
+        {text}
       </div>
     </div>
   );
