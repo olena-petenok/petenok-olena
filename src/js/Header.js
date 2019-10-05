@@ -18,13 +18,17 @@ function HeaderLanguageLink(props) {
 }
 
 function HeaderMenu(props) {
-  const links = props.links.map((item) =>
-    <HeaderLink key={item.id} active={item.active} href={item.href} value={item.value} class={item.class} />
-  );
+  const links = props.links.map((item) => {
+    let active = '';
+    if (props.activeId == item.id) { active = 'active'; }
+    return ( <HeaderLink key={item.id} active={active} href={item.href} value={item.value} class={item.class} /> );
+  });
 
-  const languages = props.languages.map((item) =>
-    <HeaderLanguageLink key={item.id} active={item.active} href={item.href} value={item.value} />
-  );
+  const languages = props.languages.map((item) => {
+    let active = '';
+    if (props.activeLanguageId == item.id) { active = 'active'; }
+    return ( <HeaderLanguageLink key={item.id} active={active} href={item.href} value={item.value} /> );
+  });
 
   return (
     <nav className="text-menu-large-screen">
@@ -94,9 +98,11 @@ function HeaderMenuSmallItems(props) {
     }
   });
 
-  const languages = props.languages.map((item) =>
-    <HeaderLanguageLink key={item.id} active={item.active} href={item.href} value={item.value} />
-  );
+  const languages = props.languages.map((item) => {
+    let active = '';
+    if (props.activeLanguageId == item.id) { active = 'active'; }
+    return ( <HeaderLanguageLink key={item.id} active={active} href={item.href} value={item.value} /> );
+  });
 
   return (
     <div className="mobile-menu-container">
@@ -134,22 +140,13 @@ class Header extends React.Component {
   };
 
   render() {
-    for (let i = 0; i < this.props.links.length; i++) {
-      if (i != this.props.activeLink) { this.props.links[i].active = '';}
-      else { this.props.links[i].active = 'active'; }
-    }
-    for (let i = 0; i < this.props.languages.length; i++) {
-      if (i != this.props.activeLanguage) { this.props.languages[i].active = '';}
-      else { this.props.languages[i].active = 'active'; }
-    }
-
     return (
       <header className="header-background">
         <div className="uk-container">
           <div className="header-align">
             <HeaderLogo links={this.props.logo} />
-            <HeaderMenu links={this.props.links} languages={this.props.languages} />
-            <HeaderMenuSmallItems links={this.props.linksSmall} languages={this.props.languages} />
+            <HeaderMenu links={this.props.links} languages={this.props.languages} activeLanguageId={this.props.activeLanguageId} activeId={this.props.activeId} />
+            <HeaderMenuSmallItems links={this.props.linksSmall} languages={this.props.languages} activeLanguageId={this.props.activeLanguageId} activeId={this.props.activeId} />
             <div className="menu-icon-container">
               <div className="menu-icon" onClick={this.onIconClick}></div>
             </div>
