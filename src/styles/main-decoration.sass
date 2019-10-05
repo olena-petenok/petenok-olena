@@ -28,33 +28,26 @@ ul, nav ul
     &:last-of-type
       padding-bottom: 45px
 
-.services .services-block.block-shadow,
-.about-author .portrait-image.block-shadow,
-.about-author .portrait-image-block,
-.about-author .double-text-block .text-block.block-shadow
+.parallelogram-block-transition
   -webkit-transition: 0.2s ease-in-out
   -moz-transition:    0.2s ease-in-out
   -ms-transition:     0.2s ease-in-out
   -o-transition:      0.2s ease-in-out
   transition:         0.2s ease-in-out
 
-.services .services-block.block-shadow,
-.about-author .portrait-image.block-shadow,
-.about-author .double-text-block .text-block.block-shadow
+.parallelogram-block-shadow
   -webkit-box-shadow: 2px 8px 20px $block-shadow-color
   -moz-box-shadow:    2px 8px 20px $block-shadow-color
   box-shadow:         2px 8px 20px $block-shadow-color
+  &:hover
+    -webkit-box-shadow: 2px 8px 30px $block-shadow-color-hover
+    -moz-box-shadow:    2px 8px 30px $block-shadow-color-hover
+    box-shadow:         2px 8px 30px $block-shadow-color-hover
+    @media ($media-max-width: $media-medium-screen)
+      -webkit-box-shadow: 1px 6px 25px $block-shadow-color-hover
+      -moz-box-shadow:    1px 6px 25px $block-shadow-color-hover
+      box-shadow:         1px 6px 25px $block-shadow-color-hover
   @media ($media-max-width: $media-medium-screen)
     -webkit-box-shadow: 1px 6px 15px $block-shadow-color
     -moz-box-shadow:    1px 6px 15px $block-shadow-color
     box-shadow:         1px 6px 15px $block-shadow-color
-
-.services .services-block.block-shadow:hover,
-.about-author .double-text-block .text-block.block-shadow:hover
-  -webkit-box-shadow: 2px 8px 30px $block-shadow-color-hover
-  -moz-box-shadow:    2px 8px 30px $block-shadow-color-hover
-  box-shadow:         2px 8px 30px $block-shadow-color-hover
-  @media ($media-max-width: $media-medium-screen)
-    -webkit-box-shadow: 1px 6px 25px $block-shadow-color-hover
-    -moz-box-shadow:    1px 6px 25px $block-shadow-color-hover
-    box-shadow:         1px 6px 25px $block-shadow-color-hover

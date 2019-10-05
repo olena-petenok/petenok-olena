@@ -7,7 +7,7 @@ function PhotoAboutAuthor() {
     <section className="uk-width-1-1 uk-width-1-3@s">
       <div className="portrait-image-block">
         <div className="portrait-image-shadow">
-          <img src={PortraitImage} alt="portrait" className="portrait-image block-shadow" />
+          <img src={PortraitImage} alt="portrait" className="portrait-image parallelogram-block-shadow" />
         </div>
       </div>
     </section>
@@ -37,7 +37,7 @@ function VerticalAboutAuthorBlock(props) {
 
   return (
     <div className={`uk-width-${props.ukWidth}`}>
-      <div className="text-block block-shadow">
+      <div className="text-block parallelogram-block-shadow parallelogram-block-transition">
         <p className="subtitle-text text-item-colors-underline">{props.subtitle}</p>
         <div className="main-text">{text}</div>
       </div>

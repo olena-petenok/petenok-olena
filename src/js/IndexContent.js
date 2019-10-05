@@ -17,7 +17,7 @@ function VerticalIndexBlock(props) {
 
   return (
     <div className={`uk-width-${props.ukWidth}`}>
-      <div className="services-block block-shadow">
+      <div className="services-block parallelogram-block-shadow parallelogram-block-transition">
         <img src={props.src} alt={props.alt} className="element-round-image" />
         <p className="element-title">{props.title}</p>
         {text}
